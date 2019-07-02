@@ -13,7 +13,7 @@
     },
     "devDependencies": {
         "concurrently": "^3.5.1",
-        "nodemon": "^1.17.5"
+        "nodemon": "^1.19.1"
     },
     "scripts": {
         "start": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",

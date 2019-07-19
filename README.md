@@ -4,7 +4,7 @@ This is a legacy project, created as a POC using ReactJS and [ChatKit](https://p
 Users are able to log in to the application and share messages in real-time.
 
 ## Demo
-[Demo](flix-chat-demo.gif)
+![Demo](flix-chat-demo.gif)
 
 To start the app:
 

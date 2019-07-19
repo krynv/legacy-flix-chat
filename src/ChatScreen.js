@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ChatKit from '@pusher/chatkit';
+import { ChatManager, TokenProvider } from '@pusher/chatkit-client'
 import MessageList from './components/MessageList';
 import SendMessageForm from './components/SendMessageForm';
 import TypingIndicator from './components/TypingIndicator';
@@ -33,15 +33,16 @@ class ChatScreen extends Component {
         this.state.currentUser.isTypingIn({
             roomId: this.state.currentRoom.id
         })
-        .catch(error => console.error('error', error));
+            .catch(error => console.error('error', error));
         // ^ just in case anything goes wrong
     }
 
     componentDidMount() {
-        const chatManager = new ChatKit.ChatManager({
+
+        const chatManager = new ChatManager({
             instanceLocator: 'v1:us1:4f6486d4-e89d-400c-b3cc-2c3b3ba0e8b5',
             userId: this.props.currentUsername,
-            tokenProvider: new ChatKit.TokenProvider({
+            tokenProvider: new TokenProvider({
                 url: 'http://localhost:1337/authenticate'
             }),
         });
@@ -51,11 +52,11 @@ class ChatScreen extends Component {
             this.setState({ currentUser });
 
             // returns a promise
-            return currentUser.subscribeToRoom({
-                roomId: 9548428,
-                messageLimit: 100,
+            return currentUser.subscribeToRoomMultipart({
+                roomId: '9548428',
+                messageLimit: 0,
                 hooks: {
-                    onNewMessage: message => {
+                    onMessage: message => {
                         this.setState({
                             messages: [...this.state.messages, message],
                         });

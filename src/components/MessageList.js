@@ -30,7 +30,7 @@ class MessageList extends Component {
                             <div>
                                 <span style={styles.senderUsername}>{message.senderId}</span>{' '}
                             </div>
-                            <p style={styles.message}>{message.text}</p>
+                            <p style={styles.message}>{message.parts[0].payload.content}</p>
                         </li>
                     ))}
                 </ul>

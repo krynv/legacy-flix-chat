@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import UsernameForm from './components/UsernameForm/UsernameForm';
-import ChatScreen from './components/ChatScreen';
+import ChatScreen from './ChatScreen';
 
 class App extends Component {
 

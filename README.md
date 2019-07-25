@@ -1,5 +1,7 @@
 # legacy-flix-chat
 
+[![CircleCI](https://circleci.com/gh/krynv/legacy-flix-chat.svg?style=svg)](https://circleci.com/gh/krynv/legacy-flix-chat)
+
 This is a legacy project, created as a POC using ReactJS and [ChatKit](https://pusher.com/chatkit). 
 Users are able to log in to the application and share messages in real-time.
 

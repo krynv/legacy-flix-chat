@@ -16,7 +16,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "nodemon": "^2.0.2",
-    "sinon": "^7.5.0"
+    "sinon": "^8.0.1"
   },
   "scripts": {
     "start": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",

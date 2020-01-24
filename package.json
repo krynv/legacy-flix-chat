@@ -14,7 +14,7 @@
   "devDependencies": {
     "concurrently": "^5.0.2",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-adapter-react-16": "^1.15.2",
     "nodemon": "^2.0.2",
     "sinon": "^8.1.1"
   },
